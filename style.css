@@ -1,0 +1,193 @@
+body {
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Padrão*/
+
+:root {
+  --text-color: white;
+  --bg-url: url(./Avatar.jpg);
+  --fundo: rgba(255, 255, 255, 0.1);
+  --hover-icon: aliceblue;
+  --switchbtt: url(./moon-stars.svg);
+}
+
+/*Light Mode*/
+
+.light {
+  --text-color: black;
+  --bg-url: url(./bg-mobile-light.jpg);
+  --fundo: rgba(190, 176, 176, 0.1);
+  --hover-icon: rgba(190, 176, 176, 0.5);
+  --switchbtt: url(./sun.svg);
+}
+/*Container*/
+
+#container {
+  width: 360px;
+  /*border: 1px solid green;*/
+  margin: auto;
+  height: 1000;
+  padding: 0 24px;
+  margin-top: 40px;
+  margin: 40px auto;
+}
+
+.switch {
+  position: relative; /*Alinhar display block*/
+  width: 64px;
+  margin: auto;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  transition: background 1s;
+}
+
+.switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switchbtt) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute; /*Alinhar display block*/
+  z-index: 1;
+  left: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  cursor: pointer;
+  transition: background 1s;
+}
+.light .switch button {
+  left: initial;
+  right: 0;
+}
+
+.switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--fundo);
+  border: 1px solid var(--text-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+/*Profile*/
+
+#profile {
+  text-align: center;
+}
+#profile img {
+  width: 100px;
+}
+#profile p {
+  font-weight: bold;
+  line-height: 24px;
+  margin-top: 8px;
+  font-size: 15pt;
+  text-decoration: underline;
+}
+/* Lista Itens*/
+
+#lista {
+  margin-top: 30px;
+}
+.ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*Alinhar display flex*/
+  padding: 16px 24px;
+  justify-content: center; /*Alinhar display flex*/
+  background: var(--fundo);
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.ul li a:hover {
+  background-color: rgba(10, 10, 10, 0.3);
+}
+/*Botões Midia*/
+
+.midia {
+  /*border: 1px solid white;*/
+  height: 50px;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teste:hover {
+  padding: 3px;
+  border-radius: 50%;
+  background-color: var(--hover-icon);
+  color: rgba(13, 136, 239, 0.5);
+  transition: background 1s;
+}
+.yt:hover {
+  padding: 3px;
+  border-radius: 50%;
+  background-color: var(--hover-icon);
+  color: red;
+  transition: background 1s;
+}
+.wpp:hover {
+  padding: 3px;
+  border-radius: 50%;
+  background-color: var(--hover-icon);
+  color: green;
+  transition: background 1s;
+}
+.vrum:hover {
+  padding: 3px;
+  border-radius: 50%;
+  background-color: var(--hover-icon);
+  color: rgb(36, 36, 241);
+  transition: background 1s;
+}
+/* Margens pré*/
+.mr10 {
+  margin-right: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+/* Rodapé*/
+
+footer {
+  padding-top: 24px;
+  text-align: center; /*Alinhar texto*/
+  font-size: 14px;
+}
+
+.rodape {
+  text-decoration: none;
+  width: auto;
+}
