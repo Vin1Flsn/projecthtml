@@ -20,14 +20,14 @@ body * {
   --text-color: white;
   --bg-url: url(./Avatar.jpg);
   --fundo: rgba(255, 255, 255, 0.1);
-  --hover-icon: aliceblue;
-  --switchbtt: url(./moon-stars.svg);
+  --hover-icon: var(--text-color);
+  --switchbtt: url(./MoonStars.svg);
 }
 
 /*Light Mode*/
 
 .light {
-  --text-color: black;
+  --text-color: rgba(0, 0, 0, 0.767);
   --bg-url: url(./bg-mobile-light.jpg);
   --fundo: rgba(190, 176, 176, 0.1);
   --hover-icon: rgba(190, 176, 176, 0.5);
@@ -52,7 +52,7 @@ body * {
   margin: auto;
   margin-top: 24px;
   margin-bottom: 10px;
-  transition: background 1s;
+  transition: background 0.5s;
 }
 
 .switch button {
@@ -68,10 +68,15 @@ body * {
   top: 50%;
   cursor: pointer;
   transition: background 1s;
+  animation: slideout 0.3s;
+}
+
+.switch button:hover {
+  outline: 4px solid rgba(190, 176, 176, 0.5);
+  border-radius: 50%;
 }
 .light .switch button {
-  left: initial;
-  right: 0;
+  animation: slide 0.4s forwards;
 }
 
 .switch span {
@@ -200,5 +205,21 @@ footer {
   }
   .light {
     --bg-url: url(./bg-desktop-light.jpg);
+  }
+}
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slideout {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
