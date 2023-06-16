@@ -67,7 +67,7 @@ body * {
   transform: translateY(-50%);
   top: 50%;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.1s;
   animation: slideout 0.3s;
 }
 
